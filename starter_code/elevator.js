@@ -29,8 +29,15 @@ class Elevator {
       _passengersLeave() {}
 
       floorUp() {
+        this.direction = "Up";
+        this.floor +=1;
+      }
 
-        floorDown() {}
+        floorDown() {
+          this.direction = "Down";
+          this.floor -=1;
+        }
+
         call() {}
         log() {
           console.log("Direction " + this.direction);
@@ -39,8 +46,3 @@ class Elevator {
       }
 
       module.exports = Elevator;
-
-
-      // Write the code for the floorUp function to update the current floor by incrementing it by one. So, if the current floor was 0, it will become 1. If it's 3, it should become 4.
-      //
-      // Then, write the code for floorUp's sister function, floorDown. It should update the current floor by subtracting one from the current floor. So, if the current floor was 6, it will become 5.
